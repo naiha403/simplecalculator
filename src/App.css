@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  display: grid;
+  background-color: rgb(46, 81, 94);
+  place-content: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App{
+  height: 80vh;
+  width: 50vh;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgb(26, 40, 51);
+  box-shadow: 8px 8px 5px 0px rgba(11, 11, 11, 0.8);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.wrapper{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.display{
+  grid-column: 1 / -1;
+  color: aliceblue;
+  font-size: 40px;
+  text-align: right;
+  border-radius: 20px;
+  background-color: #986666;
+  overflow: hidden;
+  padding: 15px;
+}
+
+.btn{
+  display: grid;
+  place-content: center;
+  background-color: #986666;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 20px;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.btn:hover{
+  background-color: rgb(186, 174, 174);
+  color: #986666;
+}
+
+.light{
+  background-color: #7a7a7a;
+  color: black;
+}
+
+.light:hover{
+  background-color: white;
+  color: #7a7a7a;
+}
+
+.purple{
+  background-color: #793181;
+}
+
+.purple:hover{
+  background-color: white;
+  color: #793181;
+}
+
+.zero{
+  grid-column: 1 / span 2;
+  border-radius: 25px;
+  place-content: unset;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  padding-left: 20px;
 }
